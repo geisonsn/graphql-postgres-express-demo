@@ -16,7 +16,7 @@ const graphqlHTTP = require('express-graphql');
 
 // require postgres
 const pg = require('pg');
-const pgpool = new pg.Pool({ database: 'graphql_postgres_express_demo' });
+const pgpool = new pg.Pool({ user:'postgres', password: 'postgres', database: 'graphql_postgres_express_demo' });
 
 // set up schema
 const userType = new GraphQLObjectType({
